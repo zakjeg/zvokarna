@@ -1,0 +1,61 @@
+﻿<Window x:Class="xamlPianoRoll.View.popupMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:xamlPianoRoll.View"
+        mc:Ignorable="d" Background="#333333" MouseLeftButtonDown="Window_MouseLeftButtonDown" WindowStyle="None"
+        Title="popupMenu" Height="400" Width="600">
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="btnMinimize" Content="_" Width="40" Height="40" BorderBrush="Transparent" Background="Transparent" Foreground="White" Click="btnMinimize_Click"/>
+            <Button Name="btnMaximize" Content="🗖" Width="40" Height="40" BorderBrush="Transparent" Background="Transparent" Click="btnMaximize_Click" Foreground="White"/>
+            <Button Name="btnClose" Content="X" Width="40" Height="40" BorderBrush="Transparent" Background="Transparent" Click="btnClose_Click" Foreground="White"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1">
+            <Label Content="Izberi inštrument" Foreground="White" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,5"/>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Height="300">
+                <StackPanel Orientation="Vertical">
+        
+                    <Button Height="95" Background="Transparent" Foreground="White" Click="AddPiano_Click" Margin="5,5,5,5">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock FontSize="30" Text="Klavir"/>
+                            <Image Source="../images/instruments/pianoIcon.png" Width="50" Height="50" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Height="95" Background="Transparent" Foreground="White" Click="AddMarimba_Click" Margin="5,5,5,5">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock FontSize="30" Text="Marimba"/>
+                            <Image Source="../images/instruments/marimbaIcon.png" Width="50" Height="50" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Height="95" Background="Transparent" Foreground="White" Click="AddDrums_Click" Margin="5,5,5,5">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock FontSize="30" Text="Bobni"/>
+                            <Image Source="../images/instruments/drumsIcon.png" Width="50" Height="50" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Height="95" Background="Transparent" Foreground="White" Click="AddGuitar_Click" Margin="5,5,5,5">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock FontSize="30" Text="Kitara"/>
+                            <Image Source="/images/instruments/guitarIcon.png" Width="50" Height="50" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</Window>
