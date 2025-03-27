@@ -83,3 +83,4 @@ B:\xamlPianoRoll\xamlPianoRoll\bin\Debug\net8.0-windows\images\instruments\drums
 B:\xamlPianoRoll\xamlPianoRoll\bin\Debug\net8.0-windows\images\instruments\marimbaIcon.png
 B:\xamlPianoRoll\xamlPianoRoll\bin\Debug\net8.0-windows\images\instruments\pianoIcon.png
 B:\xamlPianoRoll\xamlPianoRoll\bin\Debug\net8.0-windows\images\instruments\guitarIcon.png
+B:\xamlPianoRoll\xamlPianoRoll\obj\Debug\net8.0-windows\xamlPianoRoll.sourcelink.json

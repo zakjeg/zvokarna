@@ -20,6 +20,49 @@
             <Setter Property="VerticalContentAlignment" Value="Center" />
             <Setter Property="HorizontalContentAlignment" Value="Center" />
         </Style>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                            CornerRadius="5"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="LightGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="RoundedToggleButtonStyle" TargetType="ToggleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Border x:Name="border" 
+                            CornerRadius="3"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
@@ -57,9 +100,9 @@
         <!-- Black at top with buttons-->
         <StackPanel Orientation="Horizontal"  Background="#333333" VerticalAlignment="Top" Grid.Row="1" Grid.ColumnSpan="3" Height="37">
 
-            <Button Content="Piano" Width="100" Height="35" VerticalAlignment="Top" Click="PianoButton_Click" Margin="40,0,20,0" Background="Transparent" Foreground="White" />
-            <Button Content="Marimba" Width="100" Height="35" VerticalAlignment="Top" Click="MarimbaButton_Click" Margin="0,0,20,0" Background="Transparent" Foreground="White" />
-            <Button Name="PlayButton" Content="Play" Width="100" Height="35" VerticalAlignment="Top" Margin="0,0,10,0" HorizontalAlignment="Left" Click="PlayButton_Click" Background="Transparent" Foreground="White"/>
+            <Button Content="Piano" Width="100" Height="35" VerticalAlignment="Top" Click="PianoButton_Click" Margin="40,0,20,0" Background="Transparent" Foreground="White" Style="{StaticResource RoundedButtonStyle}" />
+            <Button Content="Marimba" Width="100" Height="35" VerticalAlignment="Top" Click="MarimbaButton_Click" Margin="0,0,20,0" Background="Transparent" Foreground="White" Style="{StaticResource RoundedButtonStyle}" />
+            <Button Name="PlayButton" Content="Play" Width="100" Height="35" VerticalAlignment="Top" Margin="0,0,10,0" HorizontalAlignment="Left" Click="PlayButton_Click" Background="Transparent" Foreground="White" Style="{StaticResource RoundedButtonStyle}" />
 
             <!-- ComboBox for takt number -->
             <Label Content="Št. taktov:" FontSize="20" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="White" Background="Transparent" />
@@ -72,7 +115,7 @@
 
             <!-- ComboBox for notes per takt -->
             <Label Content="Note na takt:" FontSize="20" VerticalAlignment="Center" Margin="0,0,5,0" Foreground="White" Background="Transparent"/>
-            <ComboBox x:Name="ComboNote" SelectedIndex="0" Foreground="Black">
+            <ComboBox x:Name="ComboNote" SelectedIndex="0" Foreground="Black" >
                 <ComboBoxItem>3</ComboBoxItem>
                 <ComboBoxItem>4</ComboBoxItem>
                 <ComboBoxItem>6</ComboBoxItem>
@@ -84,7 +127,7 @@
                 <xctk:IntegerUpDown Minimum="30" Maximum="240" Value="{Binding BPM, Mode=TwoWay}" FontSize="16" Width="80" Margin="0,0,20,0" Foreground="White" Background="Transparent"/>
             </StackPanel>
 
-            <Button Content="Clear" Width="100" Height="35" VerticalAlignment="Top" Click="ClearButton_Click" HorizontalAlignment="Right" Foreground="White" Background="Transparent"/>
+            <Button Content="Clear" Width="100" Height="35" VerticalAlignment="Top" Click="ClearButton_Click" HorizontalAlignment="Right" Foreground="White" Background="Transparent" Style="{StaticResource RoundedButtonStyle}" />
 
         </StackPanel>
 
@@ -92,7 +135,7 @@
         <Expander Header="Meni" Foreground="White" Background="#4f4f4f" ExpandDirection="Right" Grid.Row="2" Grid.Column="0" BorderThickness="0">
             <StackPanel Width="250">
 
-                <Button Height="40" Background="Transparent" Foreground="White" Click="AddSoundtrack_Click">
+                <Button Height="40" Background="Transparent" Foreground="White" Click="AddSoundtrack_Click" Style="{StaticResource RoundedButtonStyle}" Margin="5,5,5,5">
                     <StackPanel Orientation="Horizontal">
                         
                         <TextBlock Text="Dodaj novo zvočno sled" />
@@ -117,7 +160,8 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <ToggleButton Content="{Binding DisplayName}"
+                        <ToggleButton Style="{StaticResource RoundedToggleButtonStyle}" 
+                                      Content="{Binding DisplayName}"
                           IsChecked="{Binding IsToggled, Mode=TwoWay}" 
                           Command="{Binding DataContext.PlayNoteCommand, RelativeSource={RelativeSource AncestorType=Window}}"
                           CommandParameter="{Binding}"

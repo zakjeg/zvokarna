@@ -59,7 +59,7 @@ namespace xamlPianoRoll.View
                 WindowState = WindowState.Normal;
             }
             else
-            {
+            {   
                 WindowState = WindowState.Maximized;
             }
         }

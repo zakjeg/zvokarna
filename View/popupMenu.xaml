@@ -9,6 +9,28 @@
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
     </WindowChrome.WindowChrome>
+    <Window.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" 
+                            CornerRadius="10"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="LightGray"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -28,26 +50,26 @@
 
             <ScrollViewer VerticalScrollBarVisibility="Auto" Height="300">
                 <StackPanel Orientation="Vertical">
-        
-                    <Button Height="95" Background="Transparent" Foreground="White" Click="AddPiano_Click" Margin="5,5,5,5">
+
+                    <Button Height="95" Style="{StaticResource RoundedButtonStyle}" Background="Transparent" Foreground="White" Click="AddPiano_Click" Margin="5,5,5,5"  >
                         <StackPanel Orientation="Horizontal" >
                             <TextBlock FontSize="30" Text="Klavir"/>
                             <Image Source="../images/instruments/pianoIcon.png" Width="50" Height="50" Margin="10,0,0,0"/>
                         </StackPanel>
                     </Button>
-                    <Button Height="95" Background="Transparent" Foreground="White" Click="AddMarimba_Click" Margin="5,5,5,5">
+                    <Button Height="95" Style="{StaticResource RoundedButtonStyle}" Background="Transparent" Foreground="White" Click="AddMarimba_Click" Margin="5,5,5,5">
                         <StackPanel Orientation="Horizontal" >
                             <TextBlock FontSize="30" Text="Marimba"/>
                             <Image Source="../images/instruments/marimbaIcon.png" Width="50" Height="50" Margin="10,0,0,0"/>
                         </StackPanel>
                     </Button>
-                    <Button Height="95" Background="Transparent" Foreground="White" Click="AddDrums_Click" Margin="5,5,5,5">
+                    <Button Height="95" Style="{StaticResource RoundedButtonStyle}" Background="Transparent" Foreground="White" Click="AddDrums_Click" Margin="5,5,5,5">
                         <StackPanel Orientation="Horizontal" >
                             <TextBlock FontSize="30" Text="Bobni"/>
                             <Image Source="../images/instruments/drumsIcon.png" Width="50" Height="50" Margin="10,0,0,0"/>
                         </StackPanel>
                     </Button>
-                    <Button Height="95" Background="Transparent" Foreground="White" Click="AddGuitar_Click" Margin="5,5,5,5">
+                    <Button Height="95" Style="{StaticResource RoundedButtonStyle}" Background="Transparent" Foreground="White" Click="AddGuitar_Click" Margin="5,5,5,5">
                         <StackPanel Orientation="Horizontal" >
                             <TextBlock FontSize="30" Text="Kitara"/>
                             <Image Source="/images/instruments/guitarIcon.png" Width="50" Height="50" Margin="10,0,0,0"/>
