@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 
 namespace xamlPianoRoll.View
 {
-    /// <summary>
-    /// Interaction logic for popupMenu.xaml
-    /// </summary>
+
     public partial class popupMenu : Window
     {
+        public event Action<string> InstrumentSelected;
+
         public popupMenu()
         {
             InitializeComponent();
@@ -27,23 +27,28 @@ namespace xamlPianoRoll.View
 
         private void AddPiano_Click(object sender, RoutedEventArgs e)
         {
-
+            InstrumentSelected?.Invoke("Klavir");
+            Close();
         }
+
         private void AddMarimba_Click(object sender, RoutedEventArgs e)
         {
-
+            InstrumentSelected?.Invoke("Marimba");
+            Close();
         }
+
         private void AddDrums_Click(object sender, RoutedEventArgs e)
         {
-
+            InstrumentSelected?.Invoke("Bobni");
+            Close();
         }
+
         private void AddGuitar_Click(object sender, RoutedEventArgs e)
         {
-
+            InstrumentSelected?.Invoke("AkusticniBobni");   
+            Close();
         }
 
-
-        //OSNOVNE FUNKCIJE OKNA
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
@@ -68,6 +73,24 @@ namespace xamlPianoRoll.View
             Close(); //zapre okno
                      //Application.Current.Shutdown(); //zapre celotno aplicacijo
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            UpdateClip();
+        }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            UpdateClip();
+        }
+
+        private void UpdateClip()
+        {
+            var rect = new Rect(0, 0, ActualWidth, ActualHeight);
+            var geometry = new RectangleGeometry(rect, 12, 12);
+            MainBorder.Clip = geometry;
+        }
+
 
     }
 }

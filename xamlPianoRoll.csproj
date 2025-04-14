@@ -9,23 +9,79 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="images\instruments\drumsIcon.png" />
-    <None Remove="images\instruments\guitarIcon.png" />
+    <None Remove="images\icons\add_soundtrack.png" />
+    <None Remove="images\icons\add_soundtrack_green.png" />
+    <None Remove="images\icons\clear_track.png" />
+    <None Remove="images\icons\clear_track_red.png" />
+    <None Remove="images\icons\play_button.png" />
+    <None Remove="images\icons\play_button_green.png" />
+    <None Remove="images\icons\play_solo_button.png" />
+    <None Remove="images\icons\play_solo_button_green.png" />
+    <None Remove="images\icons\setting_cog.png" />
+    <None Remove="images\icons\stop_playback.png" />
+    <None Remove="images\icons\stop_solo_playback.png" />
+    <None Remove="images\icons\vinyl_record.png" />
+    <None Remove="images\icons\vinyl_record_white.png" />
+    <None Remove="images\icons\ZvokarnaWhiteLogo2.png" />
     <None Remove="images\instruments\marimbaIcon.png" />
-    <None Remove="images\instruments\pianoIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="images\instruments\drumsIcon.png">
+    <Content Include="images\icons\add_soundtrack.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="images\instruments\guitarIcon.png">
+    <Content Include="images\icons\add_soundtrack_green.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="images\instruments\marimbaIcon.png">
+    <Content Include="images\icons\clear_track.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="images\instruments\pianoIcon.png">
+    <Content Include="images\icons\clear_track_red.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\play_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\play_button_green.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\play_solo_button.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\play_solo_button_green.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\setting_cog.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\stop_playback.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\stop_solo_playback.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\vinyl_record.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\vinyl_record_white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\icons\ZvokarnaWhiteLogo2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\instruments\AkusticniBobniIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\instruments\BobniIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\instruments\KitaraIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\instruments\MarimbaIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\instruments\KlavirIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -33,6 +89,7 @@
   <ItemGroup>
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.7.25104.5739" />
     <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="NAudio.Lame" Version="2.1.0" />
   </ItemGroup>
 
 </Project>

@@ -56,7 +56,7 @@ namespace xamlPianoRoll
         {
             outputDevice.Dispose();
         }
-
+        //original 44100 -- 48000
         public static readonly AudioPlaybackEngine Instance = new AudioPlaybackEngine(44100, 2);
     }
 }

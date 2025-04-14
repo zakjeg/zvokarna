@@ -8,9 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/instruments/drumsicon.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/instruments/guitaricon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/add_soundtrack.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/add_soundtrack_green.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/clear_track.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/clear_track_red.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/play_button.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/play_button_green.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/play_solo_button.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/play_solo_button_green.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/setting_cog.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/stop_playback.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/stop_solo_playback.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/vinyl_record.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/vinyl_record_white.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons/zvokarnawhitelogo2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/instruments/akusticnibobniicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/instruments/bobniicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/instruments/kitaraicon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/instruments/marimbaicon.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/instruments/pianoicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/instruments/klaviricon.png")]
 
 
