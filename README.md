@@ -2,9 +2,9 @@
 
 Zvokarna je preprosta namizna aplikacija, ki uporabniku omogoča ustvarjanje lastnih zvočnih posnetkov z uporabo različnih inštrumentov. Z enostavnim grafičnim vmesnikom lahko uporabnik hitro sestavi glasbene zanke, ritme in melodije.
 
-# Izgled
+## Izgled
 
-![Screenshot of the App git GUI](slikeZaReadme/posnetekAplikacije.png)
+![Screenshot of the App git GUI](datotekeZaReadme/posnetekAplikacije.png)
 
 ## Glavne funkcionalnosti
 
@@ -15,6 +15,11 @@ Zvokarna je preprosta namizna aplikacija, ki uporabniku omogoča ustvarjanje las
 - Izvoz zvočnega posnetka v `.mp3` formatu
 - Nastavitve števila taktov, not v taktu in hitrosti (BPM)
 
+## Primer projekta in izvoženega posnetka
+
+-Primer izvoženega zvočnega posnetka: [primer .mp3 posnetka](datotekeZaReadme/repaVivaLaVida.mp3)
+-Primer projekta v .repa datoteki: [primer projekta .repa](datotekeZaReadme/VivaLaVida3.repa)
+
 ## Tehnične podrobnosti
 
 - Programski jezik: C#
@@ -22,9 +27,9 @@ Zvokarna je preprosta namizna aplikacija, ki uporabniku omogoča ustvarjanje las
 - Knjižnica za delo z zvokom: [NAudio](https://github.com/naudio/NAudio)
 - Ciljna platforma: Windows (.NET 6.0 ali novejši)
 
-# Diagram primer uporabe
+## Diagram primer uporabe
 
-![UML use case diagram](slikeZaReadme/diagramPrimeraUporabe.png)
+![UML use case diagram](datotekeZaReadme/diagramPrimeraUporabe.png)
 
 ## Namestitev in zagon
 

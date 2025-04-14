@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("xamlPianoRoll")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0132850824ffe8580e129447ca8bf7aab6471283")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e706c36c8a2baab16c6b8f33b1e46bafb3f3dcad")]
 [assembly: System.Reflection.AssemblyProductAttribute("xamlPianoRoll")]
 [assembly: System.Reflection.AssemblyTitleAttribute("xamlPianoRoll")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
