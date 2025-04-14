@@ -17,8 +17,8 @@ Zvokarna je preprosta namizna aplikacija, ki uporabniku omogoča ustvarjanje las
 
 ## Primer projekta in izvoženega posnetka
 
--Primer izvoženega zvočnega posnetka: [primer .mp3 posnetka](datotekeZaReadme/repaVivaLaVida.mp3)
--Primer projekta v .repa datoteki: [primer projekta .repa](datotekeZaReadme/VivaLaVida3.repa)
+- Primer izvoženega zvočnega posnetka: [primer .mp3 posnetka](datotekeZaReadme/repaVivaLaVida.mp3)
+- Primer projekta v .repa datoteki: [primer projekta .repa](datotekeZaReadme/VivaLaVida3.repa)
 
 ## Tehnične podrobnosti
 
