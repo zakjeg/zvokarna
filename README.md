@@ -22,6 +22,8 @@ Zvokarna je preprosta namizna aplikacija, ki uporabniku omogoča ustvarjanje las
 - Knjižnica za delo z zvokom: [NAudio](https://github.com/naudio/NAudio)
 - Ciljna platforma: Windows (.NET 6.0 ali novejši)
 
+# Diagram primer uporabe
+
 ![UML use case diagram](slikeZaReadme/diagramPrimeraUporabe.png)
 
 ## Namestitev in zagon
