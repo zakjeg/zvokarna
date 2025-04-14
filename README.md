@@ -36,5 +36,5 @@ Zvokarna je preprosta namizna aplikacija, ki uporabniku omogoča ustvarjanje las
 1. Kloniraj repozitorij:
 
    ```bash
-   git clone https://github.com/tvoje-uporabnisko-ime/zvokarna.git
+   git clone https://github.com/zakjeg/zvokarna.git
    cd zvokarna
